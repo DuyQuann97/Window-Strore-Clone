@@ -28,3 +28,5 @@ D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\User
 D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\UserControls\ProductivityTopApps.baml
 D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\Pages\Main.g.cs
 D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\Pages\Main.baml
+D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\UserControls\AppDetails.g.cs
+D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\UserControls\AppDetails.baml
