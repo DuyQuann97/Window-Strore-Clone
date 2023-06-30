@@ -27,15 +27,18 @@ namespace WindowStoreClone
         {
             InitializeComponent();
             MainWindowContentPage = new Main();
-            MainWindowContentPage.AppCliked += MainWindowContentPage_AppCliked;
+            MainWindowContentPage.AppClicked += MainWindowContentPage_AppCliked;
         }
 
         private void MainWindowContentPage_AppCliked(AnApp sender, RoutedEventArgs e)
         {
             AppDetailsPage myAppDetails = new AppDetailsPage(sender);
             myAppDetails.BackButtonClicked += MyAppDetails_BackButtonCliked;
+            myAppDetails.AppClicked += MainWindowContentPage_AppCliked;
             MainFrameWindow.Content = myAppDetails;
         }
+
+       
         private void MyAppDetails_BackButtonCliked(object sender, RoutedEventArgs e) 
         {
             if (MainFrameWindow.NavigationService.CanGoBack)

@@ -22,25 +22,25 @@ namespace WindowStoreClone.Pages
     public partial class Main : Page
     {
         public delegate void OnAppClicked(AnApp sender, RoutedEventArgs e);
-        public event OnAppClicked AppCliked;
+        public event OnAppClicked AppClicked;
         public Main()
         {
             InitializeComponent();
 
-            DealsAppsViewer.AppCliked += AnAppCliked;
+            DealsAppsViewer.AppClicked += AnAppCliked;
 
-            GamingViewer.AppCliked += AnAppCliked;
-            EntertainmentViewer.AppCliked += AnAppCliked;
+            GamingViewer.AppClicked += AnAppCliked;
+            EntertainmentViewer.AppClicked += AnAppCliked;
 
-            FeaturedAppsViewer.AppCliked += AnAppCliked;
-            TopAppsViewer.AppCliked += AnAppCliked;
-            TopGamesViewer.AppCliked += AnAppCliked;
-            CollectionsViewer.AppCliked += AnAppCliked;
+            FeaturedAppsViewer.AppClicked += AnAppCliked;
+            TopAppsViewer.AppClicked += AnAppCliked;
+            TopGamesViewer.AppClicked += AnAppCliked;
+            CollectionsViewer.AppClicked += AnAppCliked;
         }
 
         private void AnAppCliked(AnApp sender, RoutedEventArgs e)
         {
-            AppCliked(sender, e);
+            AppClicked(sender, e);
         }
     }
 }

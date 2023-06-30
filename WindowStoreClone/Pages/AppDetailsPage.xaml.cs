@@ -23,13 +23,22 @@ namespace WindowStoreClone.Pages
     {
         public delegate void OnBackButtonClicked(object sender, RoutedEventArgs e);
         public event OnBackButtonClicked BackButtonClicked;
+        public delegate void OnAppClicked(AnApp sender, RoutedEventArgs e);
+        public event OnAppClicked AppClicked;
         public AppDetailsPage(AnApp inApp)
         {
             InitializeComponent();
             AppDetailTitleAndBackGroundUC.AppLabelName.Content = inApp.AppName;
             AppDetailTitleAndBackGroundUC.AppImage.Source = inApp.AppImageSource;
             AppDetailTitleAndBackGroundUC.BackButtonClicked += AppDetailTitleAndBackGroundUC_BackButtonCliked;
+            OverviewTabUC.AppClicked += OverviewTabUC_AppClicked;
         }
+
+        private void OverviewTabUC_AppClicked(AnApp sender, RoutedEventArgs e)
+        {
+            AppClicked(sender, e);
+        }
+
 
         private void AppDetailTitleAndBackGroundUC_BackButtonCliked(object sender, RoutedEventArgs e)
         {
