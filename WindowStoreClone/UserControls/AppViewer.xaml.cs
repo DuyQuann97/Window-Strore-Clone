@@ -21,6 +21,8 @@ namespace WindowStoreClone.UserControls
     public partial class AppViewer : UserControl
     {
         List<AnApp> PresentApps;
+        public delegate void OnAppClicked(AnApp sender, RoutedEventArgs e);
+        public event OnAppClicked AppCliked;
         public AppViewer()
         {
             InitializeComponent();
@@ -29,8 +31,14 @@ namespace WindowStoreClone.UserControls
             for(int i = 0; i < 9; i++) 
             {
                 AnApp currApp = new AnApp();
+                currApp.AppCliked += Curr_AppCliked;
                 PresentApps.Add(currApp);
             } 
+        }
+
+        private void Curr_AppCliked(AnApp sender, RoutedEventArgs e) 
+        {
+            AppCliked(sender, e);
         }
 
         private void ScrollLeftButton_Click(object sender, RoutedEventArgs e)

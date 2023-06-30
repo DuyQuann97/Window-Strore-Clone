@@ -30,3 +30,5 @@ D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\Page
 D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\Pages\Main.baml
 D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\UserControls\AppDetails.g.cs
 D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\UserControls\AppDetails.baml
+D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\Pages\AppDetailsPage.g.cs
+D:\Laptrinh\cs\Learn\New folder\WindowStoreClone\WindowStoreClone\obj\Debug\Pages\AppDetailsPage.baml

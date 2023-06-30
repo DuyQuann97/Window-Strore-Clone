@@ -20,13 +20,17 @@ namespace WindowStoreClone.UserControls
     /// </summary>
     public partial class AppDetails : UserControl
     {
+        public delegate void OnBackButtonClicked(object sender, RoutedEventArgs e);
+        public event OnBackButtonClicked BackButtonClicked;
         public AppDetails()
         {
             InitializeComponent();
+
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            BackButtonClicked(sender, e);
 
         }
     }

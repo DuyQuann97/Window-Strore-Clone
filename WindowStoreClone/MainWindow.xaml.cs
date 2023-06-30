@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WindowStoreClone.Pages;
+using WindowStoreClone.UserControls;
 
 namespace WindowStoreClone
 {
@@ -26,10 +27,25 @@ namespace WindowStoreClone
         {
             InitializeComponent();
             MainWindowContentPage = new Main();
+            MainWindowContentPage.AppCliked += MainWindowContentPage_AppCliked;
         }
 
+        private void MainWindowContentPage_AppCliked(AnApp sender, RoutedEventArgs e)
+        {
+            AppDetailsPage myAppDetails = new AppDetailsPage(sender);
+            myAppDetails.BackButtonClicked += MyAppDetails_BackButtonCliked;
+            MainFrameWindow.Content = myAppDetails;
+        }
+        private void MyAppDetails_BackButtonCliked(object sender, RoutedEventArgs e) 
+        {
+            if (MainFrameWindow.NavigationService.CanGoBack)
+            {
+                MainFrameWindow.NavigationService.GoBack();
+            }
+        }
         private void MainFrameWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            
             MainFrameWindow.Content = MainWindowContentPage;
         }
     }

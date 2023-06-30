@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WindowStoreClone.UserControls;
 
 namespace WindowStoreClone.Pages
 {
@@ -20,9 +21,26 @@ namespace WindowStoreClone.Pages
     /// </summary>
     public partial class Main : Page
     {
+        public delegate void OnAppClicked(AnApp sender, RoutedEventArgs e);
+        public event OnAppClicked AppCliked;
         public Main()
         {
             InitializeComponent();
+
+            DealsAppsViewer.AppCliked += AnAppCliked;
+
+            GamingViewer.AppCliked += AnAppCliked;
+            EntertainmentViewer.AppCliked += AnAppCliked;
+
+            FeaturedAppsViewer.AppCliked += AnAppCliked;
+            TopAppsViewer.AppCliked += AnAppCliked;
+            TopGamesViewer.AppCliked += AnAppCliked;
+            CollectionsViewer.AppCliked += AnAppCliked;
+        }
+
+        private void AnAppCliked(AnApp sender, RoutedEventArgs e)
+        {
+            AppCliked(sender, e);
         }
     }
 }

@@ -51,6 +51,7 @@
                         <!--App Viewer Display Here-->
                         <!--Featured Apps-->
                         <Label
+                            
                             Content="Featured Apps"
                             FontSize="40"
                             Margin="10"
